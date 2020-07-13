@@ -7,3 +7,9 @@ styles.opacity = 1; (function fade () {
     ? styles.display = "none"
     : setTimeout(fade, 40)
 }) ();
+
+// we can also write the same line of with just one line with jquery'
+
+//jQuery
+
+$('#exampl.').fadeOut();
