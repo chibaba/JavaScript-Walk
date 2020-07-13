@@ -8,6 +8,26 @@ styles.opacity = 1; (function fade () {
     : setTimeout(fade, 40)
 }) ();
 
+const request = new XMLHttpRequest();
+request.open("POST", "/example/api", true);
+request.onreadystatechange = function() {
+    if (request.readyState != 4 || request.status != 200) 
+    return;
+    console.log("Successful XHR!");
+
+};
+request.send("example=payload");
+
+// jQuery
+$.ajax({
+    type: "POST",
+    url: "/example/api",
+    data: "example=payload",
+    success: function() {
+    console.log("Successful XHR!");
+    }
+    });
+
 // we can also write the same line of with just one line with jquery'
 
 //jQuery
